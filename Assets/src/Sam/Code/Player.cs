@@ -5,44 +5,17 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    
-    [SerializeField]private float moveSpeed;
-    [SerializeField]private Rigidbody2D rb;
-
     [SerializeField]private LevelManager levelManager;
 
     [SerializeField]private KeyManager keyManager;
 
     [SerializeField]private GameObject firstDoor, secondDoor, thirdDoor;
 
-    private Vector2 move;
-
-
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();  
         keyManager = GameObject.FindWithTag("keymanagement").GetComponent<KeyManager>();
 
     }
-
-
-    void FixedUpdate() 
-    {
-        movement();
-    }
-
-    void movement()
-    {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-
-        // Calculate movement vector
-        Vector2 movement = new Vector2(horizontalInput, verticalInput);
-
-        // Move the object
-        rb.velocity = new Vector2(movement.x * moveSpeed, movement.y * moveSpeed);
-    }
-
     private void OnCollisionEnter2D(Collision2D other) 
     {
 
