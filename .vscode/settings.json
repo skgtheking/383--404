@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "383-Game.sln"
+    "dotnet.defaultSolution": "383--404.sln"
 }
