@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: 55c82b638da2d4d9a8bfa4529f29cef5
+guid: 95743ce52499d467b9fc5dead49a811c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6122279012329488589
-    second: error 404 grass ans_0
+      213: -4178046375966092550
+    second: 4_0
   externalObjects: {}
-  serializedVersion: 13
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: error 404 grass ans_0
+      name: 4_0
       rect:
         serializedVersion: 2
-        x: 79
-        y: 255
-        width: 162
-        height: 130
+        x: 0
+        y: 0
+        width: 141
+        height: 168
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc08ab11354b6f450800000000000000
-      internalID: 6122279012329488589
+      spriteID: af2de6115f89406c0800000000000000
+      internalID: -4178046375966092550
       vertices: []
       indices: 
       edges: []
@@ -131,7 +144,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      error 404 grass ans_0: 6122279012329488589
+      4_0: -4178046375966092550
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
