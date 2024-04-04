@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour
     
     void Start()
     {
+     
+     player = GameObject.FindWithTag("player");
      rb = GetComponent<Rigidbody2D>();  
 
     }
