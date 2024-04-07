@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
     
     [SerializeField]private float moveSpeed;
-    [SerializeField]private Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     [SerializeField]private LevelManager levelManager;
 
@@ -21,7 +21,19 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();  
-        keyManager = GameObject.FindWithTag("keymanagement").GetComponent<KeyManager>();
+        GameObject keyManagerObject = GameObject.FindWithTag("keymanagement");
+    if (keyManagerObject != null)
+    {
+        keyManager = keyManagerObject.GetComponent<KeyManager>();
+        if (keyManager == null)
+        {
+            Debug.LogError("KeyManager component not found on object with tag 'keymanagement'");
+        }
+    }
+    else
+    {
+        Debug.LogError("GameObject with tag 'keymanagement' not found");
+    }
 
     }
 
