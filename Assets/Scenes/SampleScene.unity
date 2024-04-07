@@ -1317,7 +1317,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 305602310}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd1223fb79873694cb10221737ae1ddc, type: 3}
+  m_Script: {fileID: 11500000, guid: bff9c8cf6516a4543b09bb4fd85565a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
@@ -2684,7 +2684,7 @@ GameObject:
   - component: {fileID: 741879221}
   - component: {fileID: 741879220}
   m_Layer: 0
-  m_Name: error 404Bottom wall level 1_0
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
