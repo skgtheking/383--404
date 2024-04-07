@@ -6,6 +6,14 @@ TagManager:
   tags:
   - object
   - door
+  - key
+  - firewall
+  - keymanagement
+  - enemy
+  - QandA_Canvas
+  - Question
+  - AnswerField
+  - SubmitButton
   layers:
   - Default
   - TransparentFX
