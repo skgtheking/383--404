@@ -8,7 +8,26 @@ public class SettingsMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
     public TMPro.TMP_Dropdown resolutionDropdown;
+    public GameObject SettingsMenu2;
     Resolution[] resolutions;
+    private bool settingsOn;
+
+    void Update()
+    {
+        if (Input.GetButtonDown("Settings") && settingsOn)
+        {
+            Time.timeScale = 1;
+            SettingsMenu2.SetActive(false);
+            settingsOn = false;
+        }
+
+        else if (Input.GetButtonDown("Settings") && !settingsOn)
+        {
+            Time.timeScale = 0;
+            SettingsMenu2.SetActive(true);
+            settingsOn = true;
+        }
+    }
     void Start()
     {
         resolutions = Screen.resolutions;
