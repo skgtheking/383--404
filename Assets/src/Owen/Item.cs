@@ -22,7 +22,7 @@ public class Item : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
+        inventoryManager = GameObject.Find("InventoryCanvas")?.GetComponent<InventoryManager>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
