@@ -25,6 +25,17 @@ TagManager:
   - grid8
   - input9
   - checkPuzzle
+  - BackgroundMusic
+  - WalkingGrass
+  - MonsterRoar
+  - WalkingConcrete
+  - FireBurning
+  - VictorySound
+  - DefeatSound
+  - WoodSound
+  - FireSound
+  - ConcreteSound
+  - Fire
   layers:
   - Default
   - TransparentFX

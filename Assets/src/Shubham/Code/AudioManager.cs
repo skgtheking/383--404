@@ -1,13 +1,17 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class AudioManager: MonoBehaviour{
+public class AudioManager : MonoBehaviour
+{
     private static AudioManager instance;
-    public static AudioManager Instance{
-        get{
-            if(instance == null){
+    public static AudioManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
                 instance = FindObjectOfType<AudioManager>();
-                if(instance == null){
+                if (instance == null)
+                {
                     GameObject obj = new GameObject();
                     obj.name = typeof(AudioManager).Name;
                     instance = obj.AddComponent<AudioManager>();
@@ -18,64 +22,72 @@ public class AudioManager: MonoBehaviour{
         }
     }
 
-    public AudioSource backgroundMusicSource;
-    public AudioSource walkingGrassSource;
-    public AudioSource walkingWoodSource;
-    public AudioSource monsterRoarSource;
-    public AudioSource walkingConcreteSource;
-    public AudioSource fireBurningSource;
-    public AudioSource victorySoundSource;
-    public AudioSource defeatSoundSource;
+    private AudioSource backgroundMusicSource;
+    private AudioSource walkingGrassSource;
+    private AudioSource walkingWoodSource;
+    private AudioSource monsterRoarSource;
+    private AudioSource walkingConcreteSource;
+    private AudioSource fireBurningSource;
+    private AudioSource victorySoundSource;
+    private AudioSource defeatSoundSource;
 
-    private void Start() {
-        backgroundMusicSource = GetComponent<AudioSource>();
-        walkingGrassSource = GetComponent<AudioSource>();
-        walkingWoodSource = GetComponent<AudioSource>();
-        monsterRoarSource = GetComponent<AudioSource>();
-        walkingConcreteSource = GetComponent<AudioSource>();
-        fireBurningSource = GetComponent<AudioSource>();
-        victorySoundSource = GetComponent<AudioSource>();
-        defeatSoundSource = GetComponent<AudioSource>();
+    private void Start()
+    {
+        // Get references to the AudioSource components by tag
+        backgroundMusicSource = GameObject.FindGameObjectWithTag("BackgroundMusic").GetComponent<AudioSource>();
+        walkingGrassSource = GameObject.FindGameObjectWithTag("WalkingGrass").GetComponent<AudioSource>();
+        walkingWoodSource = GameObject.FindGameObjectWithTag("WoodSound").GetComponent<AudioSource>();
+        monsterRoarSource = GameObject.FindGameObjectWithTag("MonsterRoar").GetComponent<AudioSource>();
+        walkingConcreteSource = GameObject.FindGameObjectWithTag("ConcreteSound").GetComponent<AudioSource>();
+        fireBurningSource = GameObject.FindGameObjectWithTag("FireSound").GetComponent<AudioSource>();
+        victorySoundSource = GameObject.FindGameObjectWithTag("VictorySound").GetComponent<AudioSource>();
+        defeatSoundSource = GameObject.FindGameObjectWithTag("DefeatSound").GetComponent<AudioSource>();
     }
 
     // Functions to play sound
-    public void PlayBackgroundMusic(AudioClip bgm){
-        backgroundMusicSource.clip = bgm;
+    public void PlayBackgroundMusic()
+    {
         backgroundMusicSource.Play();
     }
 
-    public void PlayWalkingGrassSound(AudioClip grass){
-        walkingGrassSource.clip = grass;
+    public void PlayWalkingGrassSound()
+    {
         walkingGrassSource.Play();
     }
 
-    public void PlayWalkingWoodSound(AudioClip wood){
-        walkingWoodSource.clip = wood;
+    public void PlayWalkingWoodSound()
+    {
+        //Stop Grass Sound
+        walkingGrassSource.Stop();
         walkingWoodSource.Play();
     }
 
-    public void PlayMonsterRoarSound(AudioClip roar){
-        monsterRoarSource.clip = roar;
+    public void PlayMonsterRoarSound()
+    {
         monsterRoarSource.Play();
     }
 
-    public void PlayWalkingConcreteSound(AudioClip concrete){
-        walkingConcreteSource.clip = concrete;
+    public void PlayWalkingConcreteSound()
+    {
+        //Stop Wood Source
+        walkingWoodSource.Stop();
         walkingConcreteSource.Play();
     }
 
-    public void PlayFireBurningSound(AudioClip fire){
-        fireBurningSource.clip = fire;
+    public void PlayFireBurningSound()
+    {
+        //Stop wood sound
+        walkingWoodSource.Stop();
         fireBurningSource.Play();
     }
 
-    public void PlayVictorySound(AudioClip victory){
-        victorySoundSource.clip = victory;
+    public void PlayVictorySound()
+    {
         victorySoundSource.Play();
     }
 
-    public void PlayDefeatSound(AudioClip defeat){
-        defeatSoundSource.clip = defeat;
+    public void PlayDefeatSound()
+    {
         defeatSoundSource.Play();
     }
 }
