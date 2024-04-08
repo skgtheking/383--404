@@ -12,12 +12,19 @@ public class InventoryManager : MonoBehaviour
 
     void Start()
     {
+        menuActivated = false;
     }
     // Update is called once per frame
     void Update()
     {
+        invControl();
+    }
+
+    void invControl()
+    {
         if (Input.GetKeyDown(KeyCode.I) && menuActivated)
         {
+            Debug.Log("Off");
             Time.timeScale = 1;
             InventoryMenu.SetActive(false);
             menuActivated = false;
@@ -25,6 +32,7 @@ public class InventoryManager : MonoBehaviour
 
         else if (Input.GetKeyDown(KeyCode.I) && !menuActivated)
         {
+            Debug.Log("On");
             Time.timeScale = 0;
             InventoryMenu.SetActive(true);
             menuActivated = true;

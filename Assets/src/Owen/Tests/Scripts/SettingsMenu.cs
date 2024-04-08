@@ -14,22 +14,12 @@ public class SettingsMenu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Settings") && settingsOn)
-        {
-            Time.timeScale = 1;
-            SettingsMenu2.SetActive(false);
-            settingsOn = false;
-        }
-
-        else if (Input.GetButtonDown("Settings") && !settingsOn)
-        {
-            Time.timeScale = 0;
-            SettingsMenu2.SetActive(true);
-            settingsOn = true;
-        }
+        invControl();
     }
     void Start()
     {
+        settingsOn = false;
+
         resolutions = Screen.resolutions;
         resolutionDropdown.ClearOptions();
 
@@ -50,6 +40,23 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+    }
+
+    void invControl()
+    {
+        if (Input.GetKeyDown(KeyCode.G) && settingsOn)
+        {
+            Time.timeScale = 1;
+            SettingsMenu2.SetActive(false);
+            settingsOn = false;
+        }
+
+        else if (Input.GetKeyDown(KeyCode.G) && !settingsOn)
+        {
+            Time.timeScale = 0;
+            SettingsMenu2.SetActive(true);
+            settingsOn = true;
+        }
     }
 
     public void SetResolution(int resolutionIndex)
