@@ -6,6 +6,10 @@ TagManager:
   tags:
   - object
   - door
+  - key
+  - firewall
+  - keymanagement
+  - enemy
   layers:
   - Default
   - TransparentFX
@@ -19,7 +23,7 @@ TagManager:
   - FirstRoomFog
   - SecondRoomFog
   - ThirdRoomFog
-  - 
+  - Ground
   - 
   - 
   - 
