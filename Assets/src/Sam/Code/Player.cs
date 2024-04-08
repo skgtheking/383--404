@@ -38,23 +38,6 @@ public class Player : MonoBehaviour
     }
 
 
-    void FixedUpdate() 
-    {
-        movement();
-    }
-
-    void movement()
-    {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-
-        // Calculate movement vector
-        Vector2 movement = new Vector2(horizontalInput, verticalInput);
-
-        // Move the object
-        rb.velocity = new Vector2(movement.x * moveSpeed, movement.y * moveSpeed);
-    }
-
     private void OnCollisionEnter2D(Collision2D other) 
     {
 
