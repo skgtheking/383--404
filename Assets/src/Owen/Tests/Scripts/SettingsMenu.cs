@@ -9,6 +9,7 @@ public class SettingsMenu : MonoBehaviour
     public AudioMixer audioMixer;
     public TMPro.TMP_Dropdown resolutionDropdown;
     public GameObject SettingsMenu2;
+    public GameObject lol;
     Resolution[] resolutions;
     private bool settingsOn;
 
