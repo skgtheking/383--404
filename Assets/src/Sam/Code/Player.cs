@@ -5,17 +5,39 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    
+    [SerializeField]private float moveSpeed;
+    public Rigidbody2D rb;
+
     [SerializeField]private LevelManager levelManager;
 
     [SerializeField]private KeyManager keyManager;
 
     [SerializeField]private GameObject firstDoor, secondDoor, thirdDoor;
 
+    private Vector2 move;
+
+
     void Start()
     {
-        keyManager = GameObject.FindWithTag("keymanagement").GetComponent<KeyManager>();
+        rb = GetComponent<Rigidbody2D>();  
+        GameObject keyManagerObject = GameObject.FindWithTag("keymanagement");
+    if (keyManagerObject != null)
+    {
+        keyManager = keyManagerObject.GetComponent<KeyManager>();
+        if (keyManager == null)
+        {
+            Debug.LogError("KeyManager component not found on object with tag 'keymanagement'");
+        }
+    }
+    else
+    {
+        Debug.LogError("GameObject with tag 'keymanagement' not found");
+    }
 
     }
+
+
     private void OnCollisionEnter2D(Collision2D other) 
     {
 

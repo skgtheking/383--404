@@ -10,12 +10,14 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private GameObject player;
 
-    [SerializeField] private float movespeed, viewdistance, increase;
+    public float movespeed, viewdistance, increase;
     private float distance;
 
     
     void Start()
     {
+     
+     player = GameObject.FindWithTag("player");
      rb = GetComponent<Rigidbody2D>();  
 
     }
@@ -50,6 +52,12 @@ public class Enemy : MonoBehaviour
         movespeed += increase;
         Debug.Log("Enemy Speed Increased, Current speed: " + movespeed);
         Invoke("increaseEnemySpeed", 5);
+    }
+
+    public void speedTest()
+    {
+        movespeed = 100;
+        viewdistance = 100;
     }
 
 }
