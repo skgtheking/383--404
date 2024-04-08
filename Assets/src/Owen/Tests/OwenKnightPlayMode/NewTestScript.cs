@@ -11,7 +11,8 @@ public class NewTestScript
     [UnityTest]
     public IEnumerator NewTestScriptWithEnumeratorPasses()
     {
-        HealthBar healthbar = new HealthBar();
+        GameObject obj = new GameObject();
+        HealthBar healthbar = obj.AddComponent<HealthBar>();
         int max = 4;
         int value = 3;
         healthbar.SetMaxHealth(max);
