@@ -1,33 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
-       [SerializeField] private Rigidbody2D rb;
-    private Vector2 move;
+    [SerializeField] private Rigidbody2D rb;
+    public Animator animator;
+    Vector2 movement;
 
-
-    void Start()
+    void Update()
     {
-        rb = GetComponent<Rigidbody2D>();
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        Movement();
-    }
-
-    void Movement()
-    {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-
-        // Calculate movement vector
-        Vector2 movement = new Vector2(horizontalInput, verticalInput);
-
-        // Move the object
-        rb.velocity = new Vector2(movement.x * moveSpeed, movement.y * moveSpeed);
+        rb.MovePosition(rb.position + movement * moveSpeed *  Time.fixedDeltaTime);
     }
 }
