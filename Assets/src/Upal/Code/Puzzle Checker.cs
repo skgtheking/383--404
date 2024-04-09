@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PuzzleChecker : MonoBehaviour
 {
+    private Canvas puzzleCanvas;
     private TextMeshProUGUI grid1;
     private TextMeshProUGUI grid2;
     private TextMeshProUGUI grid4;
@@ -19,6 +20,7 @@ public class PuzzleChecker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        puzzleCanvas = GameObject.FindWithTag("Puzzle").GetComponent<Canvas>();
         check = GameObject.FindWithTag("checkPuzzle").GetComponent<Button>();
         check.onClick.AddListener(checkPuzzle);
     }
@@ -60,7 +62,7 @@ public class PuzzleChecker : MonoBehaviour
         // Check if the sum of grid1, grid2, grid4, grid7, and grid8 is equal to the sum of input3, input5, input6, and input9
         if (grid1Value + grid2Value + grid4Value + grid7Value + grid8Value == input3Value + input5Value + input6Value + input9Value)
         {
-            Debug.Log("Puzzle Solved!");
+            puzzleCanvas.gameObject.SetActive(false);
         }
         else
         {
