@@ -36,6 +36,7 @@ TagManager:
   - FireSound
   - ConcreteSound
   - Fire
+  - PuzzleCollider
   layers:
   - Default
   - TransparentFX
