@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -74,6 +75,7 @@ public class Player : MonoBehaviour
                         Debug.Log("Entering level " + levelManager.currentLevel());
                         break;
                     case 3:
+                        SceneManager.LoadScene("GameEndMenu");
                         Debug.Log("Victory!");
                         break;
                     
