@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,28 +15,25 @@ public class Player : MonoBehaviour
 
     [SerializeField]private KeyManager keyManager;
 
+
     [SerializeField]private GameObject firstDoor, secondDoor, thirdDoor;
+
+    
 
     private Vector2 move;
 
+    private int healthpoints;
 
     void Start()
     {
+        healthpoints = 3;
         rb = GetComponent<Rigidbody2D>();  
         GameObject keyManagerObject = GameObject.FindWithTag("keymanagement");
-    if (keyManagerObject != null)
-    {
-        keyManager = keyManagerObject.GetComponent<KeyManager>();
-        if (keyManager == null)
-        {
-            Debug.LogError("KeyManager component not found on object with tag 'keymanagement'");
-        }
-    }
-    else
-    {
-        Debug.LogError("GameObject with tag 'keymanagement' not found");
     }
 
+    void Update()
+    {
+        checkDeath();
     }
 
 
@@ -98,14 +96,31 @@ public class Player : MonoBehaviour
 
         else if(other.gameObject.CompareTag("firewall"))
         {
-            Debug.Log("Ouch! burns..");
+            decreaseHP();
+            Debug.Log("Ouch! burns.. HP:" + healthpoints);
         }
 
         else if(other.gameObject.CompareTag("enemy"))
         {
-            Debug.Log("ARGH");
+            decreaseHP();
+            Debug.Log("ARGH HP:" + healthpoints);
         }
 
     }
+
+    private void checkDeath()
+    {
+        if(healthpoints < 1)
+        {
+            SceneManager.LoadScene("Lose");
+        }
+    }
+
+    public void decreaseHP()
+    {
+        healthpoints -= 1;
+    }
+
+
 
 }
