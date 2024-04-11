@@ -39,6 +39,7 @@ TagManager:
   - PuzzleCollider
   - GridRandomizer
   - QuestionGenerator
+  - player
   layers:
   - Default
   - TransparentFX
