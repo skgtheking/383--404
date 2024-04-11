@@ -37,6 +37,8 @@ TagManager:
   - ConcreteSound
   - Fire
   - PuzzleCollider
+  - GridRandomizer
+  - QuestionGenerator
   - player
   layers:
   - Default

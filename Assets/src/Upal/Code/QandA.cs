@@ -11,32 +11,30 @@ public class QandA : MonoBehaviour
     private Button submit;
     private TMP_InputField answer;
 
-    public QuestionGenerator questionGenerator;
-    private string correctAnswer;
+    private QuestionGenerator questionGenerator;
+    public string correctAnswer;
+    public string newQuestion;
 
-    private void Start()
+    public void Start()
     {
         
         QandA_Canvas = GameObject.FindWithTag("QandA_Canvas").GetComponent<Canvas>();
         questionText = GameObject.FindWithTag("Question").GetComponent<TextMeshProUGUI>();
         submit = GameObject.FindWithTag("SubmitButton").GetComponent<Button>();
         answer = GameObject.FindWithTag("AnswerField").GetComponent<TMP_InputField>();
-
+        questionGenerator = GameObject.FindWithTag("QuestionGenerator").GetComponent<QuestionGenerator>();
         QandA_Canvas.gameObject.SetActive(false);
-
-        
-
         submit.onClick.AddListener(OnButtonClick);
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    public void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("object"))
         {
             QandA_Canvas.gameObject.SetActive(true);
 
             // Get a random question from the QuestionGenerator
-            string newQuestion = questionGenerator.GetRandomQuestion();
+            newQuestion = questionGenerator.GetRandomQuestion();
             if (!string.IsNullOrEmpty(newQuestion))
             {
                 string[] questionParts = newQuestion.Split(',');
@@ -49,13 +47,30 @@ public class QandA : MonoBehaviour
             }
         }
     }
+    public void Test_Question()
+    {
+            QandA_Canvas.gameObject.SetActive(true);
 
-    private void OnButtonClick()
+            // Get a random question from the QuestionGenerator
+            newQuestion = questionGenerator.GetRandomQuestion();
+            if (!string.IsNullOrEmpty(newQuestion))
+            {
+                string[] questionParts = newQuestion.Split(',');
+                questionText.text = questionParts[0]; // Display the question part
+                correctAnswer = questionParts[1]; // Store the correct answer
+            }
+            else
+            {
+                Debug.LogError("No question found!");
+            }
+    }
+
+    public void OnButtonClick()
     {
         Debug.Log("Button Clicked");
 
         string inputText = answer.text.ToLower();
-
+        Debug.Log("Input Text: " + inputText);
         // Get the current question from the QuestionGenerator
         string currentQuestion = questionText.text;
 

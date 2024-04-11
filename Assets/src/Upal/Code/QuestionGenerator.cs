@@ -11,7 +11,7 @@ public class QuestionGenerator : MonoBehaviour
         InitializeQuestions();
     }
 
-    void InitializeQuestions()
+    public void InitializeQuestions()
     {
         // Add 10 sample questions with answers
         questionAndAnswers.Add("What's the capital of France?,Paris");
