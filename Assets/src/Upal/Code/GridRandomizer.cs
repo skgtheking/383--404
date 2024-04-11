@@ -16,7 +16,7 @@ public class GridRandomizer : MonoBehaviour
         RandomizeGrids();
     }
 
-    void RandomizeGrids()
+    public void RandomizeGrids()
     {
         // Find and assign TextMeshProUGUI components by their corresponding tags
         grid1 = GameObject.FindWithTag("grid1").GetComponent<TextMeshProUGUI>();
