@@ -7,13 +7,16 @@ using UnityEngine;
 
 public abstract class Trap : MonoBehaviour
 {
+
     public abstract void Spawn();
 
-    // Virtual method to demonstrate explicit dynamic binding
     public virtual void Activate()
     {
         Debug.Log("Generic trap activated!");
     }
+
+
+    // Example method to find the player GameObject
 }
 
 public class FireTrap : Trap
@@ -31,13 +34,11 @@ public class StoneTrap : Trap
         Debug.Log("Stone Trap spawned!");
     }
 
-    // Override the Activate method to provide specific behavior for StoneTrap
     public override void Activate()
     {
         Debug.Log("Stone Trap activated!");
     }
 }
-
 public class TrapHandler
 {
     public static GameObject LoadTrapPrefab(string trapname)
@@ -48,6 +49,8 @@ public class TrapHandler
                 return Resources.Load<GameObject>("FireTrapPrefab");
             case "Stone":
                 return Resources.Load<GameObject>("StoneTrapPrefab");
+            case "Fly":
+                return Resources.Load<GameObject>("FlyTrapPrefab");
             default:
                 Debug.LogError("Unknown Trap: " + trapname);
                 return null;
@@ -55,15 +58,21 @@ public class TrapHandler
     }
 
     public static void SpawnTrap(string trapname, Vector2 position)
+{
+    GameObject trapPrefab = LoadTrapPrefab(trapname);
+    if (trapPrefab != null)
     {
-        GameObject trapPrefab = LoadTrapPrefab(trapname);
-        if (trapPrefab != null)
-        {
-            GameObject trapInstance = GameObject.Instantiate(trapPrefab, position, Quaternion.identity);
-            Trap trapComponent = trapInstance.GetComponent<Trap>();
-            trapComponent.Spawn();
-            // Explicit dynamic binding: Call the Activate method of the specific trap type
-            trapComponent.Activate();
-        }
+        Debug.Log("Trap prefab loaded successfully: " + trapPrefab.name);
+        GameObject trapInstance = GameObject.Instantiate(trapPrefab, position, Quaternion.identity);
+        Trap trapComponent = trapInstance.GetComponent<Trap>();
+        trapComponent.Spawn();
+        Debug.Log("Trap spawned and activated successfully: " + trapname);
+            
+        
     }
+    else
+    {
+        Debug.LogError("Failed to load trap prefab: " + trapname);
+    }
+}
 }
