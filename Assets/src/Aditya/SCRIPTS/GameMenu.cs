@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameMenu : MonoBehaviour
+//GameMenu is Super Class
+public abstract class GameMenu : MonoBehaviour
 {
 
     public Button destroyMenuButton;
