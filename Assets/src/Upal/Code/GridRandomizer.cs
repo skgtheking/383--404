@@ -28,8 +28,10 @@ public class GridRandomizer : MonoBehaviour
         // Assign random values to each TextMeshProUGUI
         grid1.text = Random.Range(1, 5).ToString();
         grid2.text = Random.Range(1, 5).ToString();
+        
         grid4.text = Random.Range(1, 5).ToString();
         grid7.text = Random.Range(1, 5).ToString();
         grid8.text = Random.Range(1, 5).ToString();
+
     }
 }

@@ -9262,7 +9262,7 @@ GameObject:
   - component: {fileID: 851904883}
   m_Layer: 0
   m_Name: Q_A_Generator
-  m_TagString: Untagged
+  m_TagString: QuestionGenerator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116857,7 +116857,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2059135228}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 581331f0d5d96584382e89cbc06d72af, type: 3}
+  m_Script: {fileID: 11500000, guid: 3101949538b40f14f863e04789addc1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2066604612
