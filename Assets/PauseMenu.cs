@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -45,8 +46,9 @@ public class HelpMenu : MonoBehaviour
         SceneManager.LoadScene("GameEndMenu");
         Debug.Log("Qutting game...");
     }
-    
 
-
-
+    public static explicit operator HelpMenu(GameMenu v)
+    {
+        throw new NotImplementedException();
+    }
 }
