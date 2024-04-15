@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -73.192}
-  m_SizeDelta: {x: 0, y: -146.38}
+  m_AnchoredPosition: {x: 0, y: -51.161987}
+  m_SizeDelta: {x: 0, y: -448.288}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &50549431067646114
 MonoBehaviour:
@@ -233,8 +233,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 613.032, y: -5.1306}
-  m_SizeDelta: {x: 147.5228, y: 156.64}
+  m_AnchoredPosition: {x: 611.6846, y: -0.00028992}
+  m_SizeDelta: {x: 150.2177, y: 146.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3118560175541186830
 CanvasRenderer:
@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9433962, g: 0.7927069, b: 0.16464934, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -423,7 +423,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 67.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -499,8 +499,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.507, y: 0}
-  m_SizeDelta: {x: 281.1263, y: 104.0842}
+  m_AnchoredPosition: {x: 36.8455, y: 0}
+  m_SizeDelta: {x: 345.8033, y: 104.0842}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &134538103961323332
 CanvasRenderer:
@@ -636,8 +636,8 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 260.25, y: 90.3785}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 306.0628, y: 136.1913}
+  m_Pivot: {x: 0.5, y: 0.50000036}
 --- !u!222 &8089960811037786281
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -659,7 +659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -815,7 +815,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &582831359072011195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -973,7 +973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
