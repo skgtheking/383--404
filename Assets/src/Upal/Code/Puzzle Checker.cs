@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class PuzzleChecker : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class PuzzleChecker : MonoBehaviour
     private TMP_InputField input6;
     private TMP_InputField input9;
     private Button check;
+    public static UnityEvent puzzleSolved = new UnityEvent();
     // Start is called before the first frame update
     void Start()
     {
@@ -63,10 +65,16 @@ public class PuzzleChecker : MonoBehaviour
         if (grid1Value + grid2Value + grid4Value + grid7Value + grid8Value == input3Value + input5Value + input6Value + input9Value)
         {
             puzzleCanvas.gameObject.SetActive(false);
+            LogPuzzleStatus();
         }
         else
         {
             Debug.Log("Puzzle Not Solved!");
         }
+    }
+    private void LogPuzzleStatus()
+    {
+        Debug.Log("Puzzle Solved!");
+        puzzleSolved.Invoke();
     }
 }

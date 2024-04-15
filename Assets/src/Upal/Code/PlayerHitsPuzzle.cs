@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerHitsPuzzle : MonoBehaviour
 {
     private Canvas puzzleCanvas;
+    private ChallengeManager challengeManager;
     // Start is called before the first frame update
     void Start()
     {
