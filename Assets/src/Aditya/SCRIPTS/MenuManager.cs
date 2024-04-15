@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using yaSingleton;
+using UnityEngine.UI;
+
 
 [CreateAssetMenu(fileName = "MenuManager", menuName = "Systems/MenuManager")]
 public class MenuMANGAER : Singleton<MenuMANGAER>
@@ -15,6 +17,8 @@ public class MenuMANGAER : Singleton<MenuMANGAER>
     public GameObject pauseMenuPrefab;
 
     public GameObject canvasPrefab;
+
+    public GameObject MainMenu;
 
     private Canvas _canvas;
 
@@ -144,5 +148,8 @@ public class MenuMANGAER : Singleton<MenuMANGAER>
             
             
         }
+
+
+      
     }
 }
