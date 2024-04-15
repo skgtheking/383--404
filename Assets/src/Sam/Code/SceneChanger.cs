@@ -5,19 +5,33 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-
-    public void loseScene()
+    // Private class containing scene names and quit method
+    private class SceneData
     {
-        SceneManager.LoadScene("Lose");
+        public const string LoseScene = "Lose";
+        public const string GameScene = "SampleScene";
+
+        public static void QuitGame()
+        {
+            Application.Quit();
+        }
     }
 
-    public void gameScene()
+    // Method to load the Lose scene
+    public void LoadLoseScene()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(SceneData.LoseScene);
     }
 
-    public void exitGame()
+    // Method to load the Game scene
+    public void LoadGameScene()
     {
-        Application.Quit();
+        SceneManager.LoadScene(SceneData.GameScene);
+    }
+
+    // Method to exit the game
+    public void ExitGame()
+    {
+        SceneData.QuitGame();
     }
 }
