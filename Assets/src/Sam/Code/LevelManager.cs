@@ -6,22 +6,30 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
 
-    [SerializeField]private int level;
+    public static int level;
 
     [SerializeField] private GameObject firstRoomFog, secondRoomFog, thirdRoomFog, enemy;
 
     [SerializeField] private Enemy enemyscript;
+    
 
     [SerializeField] private float fadeDuration = 2f;
 
     void Start()
     {
+        
+
+
         enemyscript = GameObject.FindWithTag("enemy").GetComponent<Enemy>();
         enemy.SetActive(false);
         level = 1;
         firstRoomFog.SetActive(false);
         secondRoomFog.SetActive(true);
         thirdRoomFog.SetActive(true);
+        
+        Vector2 flytrapPosition = new Vector2((float)-2, (float)-1.8);
+
+        TrapHandler.SpawnTrap("Fly", flytrapPosition);
         
     }
 

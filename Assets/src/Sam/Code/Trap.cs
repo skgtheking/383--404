@@ -5,40 +5,52 @@ using UnityEngine;
 
 //Design Pattern: Factory
 
-//Dynamic Binding isn't explicitly demonstrated but it is indirectly achieved. 
-//When calling the spawn() method on an instance of Trap, the appropriate implementation of spawn() from the subclass (FireTrap or StoneTrap) is dynamically bound and executed based on the actual type of the object at runtime
 public abstract class Trap : MonoBehaviour
 {
-    public abstract void spawn();
+
+    public abstract void Spawn();
+
+    public virtual void Activate()
+    {
+        Debug.Log("Generic trap activated!");
+    }
+
+
+    // Example method to find the player GameObject
 }
 
 public class FireTrap : Trap
 {
-    public override void spawn()
+    public override void Spawn()
     {
-        Debug.Log("Fire Trap spawned! ");
+        Debug.Log("Fire Trap spawned!");
     }
-
 }
 
 public class StoneTrap : Trap
 {
-    public override void spawn()
+    public override void Spawn()
     {
         Debug.Log("Stone Trap spawned!");
     }
-}
 
+    public override void Activate()
+    {
+        Debug.Log("Stone Trap activated!");
+    }
+}
 public class TrapHandler
 {
     public static GameObject LoadTrapPrefab(string trapname)
     {
-        switch(trapname)
+        switch (trapname)
         {
             case "Fire":
                 return Resources.Load<GameObject>("FireTrapPrefab");
             case "Stone":
                 return Resources.Load<GameObject>("StoneTrapPrefab");
+            case "Fly":
+                return Resources.Load<GameObject>("FlyTrapPrefab");
             default:
                 Debug.LogError("Unknown Trap: " + trapname);
                 return null;
@@ -46,12 +58,21 @@ public class TrapHandler
     }
 
     public static void SpawnTrap(string trapname, Vector2 position)
+{
+    GameObject trapPrefab = LoadTrapPrefab(trapname);
+    if (trapPrefab != null)
     {
-        GameObject trapPrefab = LoadTrapPrefab(trapname);
-        if (trapPrefab != null)
-        {
-            GameObject trapInstance = GameObject.Instantiate(trapPrefab, position, Quaternion.identity);
-            trapInstance.GetComponent<Trap>().spawn();
-        }
+        Debug.Log("Trap prefab loaded successfully: " + trapPrefab.name);
+        GameObject trapInstance = GameObject.Instantiate(trapPrefab, position, Quaternion.identity);
+        Trap trapComponent = trapInstance.GetComponent<Trap>();
+        trapComponent.Spawn();
+        Debug.Log("Trap spawned and activated successfully: " + trapname);
+            
+        
     }
+    else
+    {
+        Debug.LogError("Failed to load trap prefab: " + trapname);
+    }
+}
 }
