@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ChallengeManager : MonoBehaviour
 {
-    public bool puzzlechallenge = false;
-    public bool quizchallenge = false;
+    private static bool puzzlechallenge = false;
+    private static bool quizchallenge = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
     void OnPuzzleSolved()
     {
@@ -33,9 +33,20 @@ public class ChallengeManager : MonoBehaviour
         Debug.Log("Puzzle Solve Invoked"); 
         QandA.questionAnswered.AddListener(OnQuizSolved);
     }
+
     private void OnDisable()
     {
         PuzzleChecker.puzzleSolved.RemoveListener(OnPuzzleSolved);
         QandA.questionAnswered.RemoveListener(OnQuizSolved);
+    }
+    public static bool puzzleStatus()
+    {
+        Debug.Log("Puzzle Status");
+        return puzzlechallenge;
+    }
+    public static bool quizStatus()
+    {
+        Debug.Log("Quiz Status");
+        return quizchallenge;
     }
 }

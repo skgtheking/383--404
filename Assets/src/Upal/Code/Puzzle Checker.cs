@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-public class PuzzleChecker : MonoBehaviour
+public class PuzzleChecker : GridRandomizer
 {
     private Canvas puzzleCanvas;
     private TextMeshProUGUI grid1;
@@ -22,6 +22,7 @@ public class PuzzleChecker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        RandomizeGrids();
         puzzleCanvas = GameObject.FindWithTag("Puzzle").GetComponent<Canvas>();
         check = GameObject.FindWithTag("checkPuzzle").GetComponent<Button>();
         check.onClick.AddListener(checkPuzzle);

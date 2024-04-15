@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerHitsPuzzle : MonoBehaviour
 {
     private Canvas puzzleCanvas;
-    private ChallengeManager challengeManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +15,7 @@ public class PlayerHitsPuzzle : MonoBehaviour
     // Update is called once per frame
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("PuzzleCollider") && challengeManager.puzzlechallenge == false)
+        if (other.gameObject.CompareTag("PuzzleCollider") && !ChallengeManager.puzzleStatus())
         {
             puzzleCanvas.gameObject.SetActive(true);
         }
