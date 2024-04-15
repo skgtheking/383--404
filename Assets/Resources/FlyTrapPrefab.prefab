@@ -121,7 +121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 584465722669476}
-  activationCollider: {fileID: 1500925931232175963}
 --- !u!61 &1500925931232175963
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -151,7 +150,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.4, y: -0.7}
