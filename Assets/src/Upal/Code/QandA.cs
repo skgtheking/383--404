@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class QandA : MonoBehaviour
 {
@@ -10,11 +11,11 @@ public class QandA : MonoBehaviour
     private TextMeshProUGUI questionText;
     private Button submit;
     private TMP_InputField answer;
-
+    private ChallengeManager challengeManager;
     private QuestionGenerator questionGenerator;
     public string correctAnswer;
     public string newQuestion;
-
+    public static UnityEvent questionAnswered = new UnityEvent();
     public void Start()
     {
         
@@ -29,7 +30,7 @@ public class QandA : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("object"))
+        if (other.gameObject.CompareTag("object") && challengeManager.quizchallenge == false)
         {
             QandA_Canvas.gameObject.SetActive(true);
 
@@ -81,6 +82,7 @@ public class QandA : MonoBehaviour
                 Debug.Log("Correct Answer");
                 answer.text = "";
                 QandA_Canvas.gameObject.SetActive(false);
+                LogQuestionStatus();
             }
             else
             {
@@ -89,5 +91,10 @@ public class QandA : MonoBehaviour
 
             Debug.Log("Input Text: " + inputText);
         }
+    }
+    private void LogQuestionStatus()
+    {
+        Debug.Log("Question Answered");
+        questionAnswered.Invoke();
     }
 }

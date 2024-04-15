@@ -19,6 +19,7 @@ public class ChallengeManager : MonoBehaviour
     void OnQuizSolved()
     {
         quizchallenge = true;
+        Debug.Log("Quiz Solved and Confirmed from Challenge Manager");
     }
 
     // Update is called once per frame
@@ -30,9 +31,11 @@ public class ChallengeManager : MonoBehaviour
     {
         PuzzleChecker.puzzleSolved.AddListener(OnPuzzleSolved);
         Debug.Log("Puzzle Solve Invoked"); 
+        QandA.questionAnswered.AddListener(OnQuizSolved);
     }
     private void OnDisable()
     {
         PuzzleChecker.puzzleSolved.RemoveListener(OnPuzzleSolved);
+        QandA.questionAnswered.RemoveListener(OnQuizSolved);
     }
 }
