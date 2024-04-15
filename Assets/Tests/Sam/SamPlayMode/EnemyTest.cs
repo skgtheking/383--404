@@ -13,9 +13,9 @@ public class EnemyTest
         var enemyGO = new GameObject();
         enemy = enemyGO.AddComponent<Enemy>();
 
-        //enemy.movespeed = 5f; // Initial speed for testing
-        //enemy.viewdistance = 10f; // Initial view distance for testing
-       // enemy.increase = 1f; // Speed increase amount for testing
+        enemy.movespeed = 5f; // Initial speed for testing
+    enemy.viewdistance = 10f; // Initial view distance for testing
+       enemy.increase = 1f; // Speed increase amount for testing
     }
 
     [UnityTest]
