@@ -115366,6 +115366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1876904074}
   player: {fileID: 305602310}
+  box: {fileID: 1876904075}
   movespeed: 5
   viewdistance: 15
   increase: 1
