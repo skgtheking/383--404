@@ -79,6 +79,7 @@ public class AudioManager : MonoBehaviour
         //Stop wood sound
         walkingWoodSource.Stop();
         fireBurningSource.Play();
+
     }
 
     public void PlayVictorySound()
