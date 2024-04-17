@@ -22,7 +22,7 @@ public class PuzzleChecker : GridRandomizer
     // Start is called before the first frame update
     void Start()
     {
-        RandomizeGrids();
+        base.RandomizeGrids();
         puzzleCanvas = GameObject.FindWithTag("Puzzle").GetComponent<Canvas>();
         check = GameObject.FindWithTag("checkPuzzle").GetComponent<Button>();
         check.onClick.AddListener(checkPuzzle);
