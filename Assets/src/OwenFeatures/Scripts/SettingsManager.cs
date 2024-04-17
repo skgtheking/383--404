@@ -68,7 +68,7 @@ public class SettingsManager : SettingsMenu
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
         GameObject resol = new GameObject();
-        Resolutions res = resol.AddComponent<Resolutions>();
+        SettingsMenu res = resol.AddComponent<Resolutions>();
         res.ChangedD();
         res.ChangedF();
     }
@@ -77,7 +77,7 @@ public class SettingsManager : SettingsMenu
     {
         audioMixer.SetFloat("volume", volume);
         GameObject volum = new GameObject();
-        Volume vol = volum.AddComponent<Volume>();
+        SettingsMenu vol = volum.AddComponent<Volume>();
         vol.ChangedD();
         vol.ChangedF();
     }
@@ -86,7 +86,7 @@ public class SettingsManager : SettingsMenu
     {
         QualitySettings.SetQualityLevel(qualityIndex);
         GameObject gr = new GameObject();
-        Graphics graph = gr.AddComponent<Graphics>();
+        SettingsMenu graph = gr.AddComponent<Graphics>();
         graph.ChangedD();
         graph.ChangedF();
     }
@@ -94,7 +94,7 @@ public class SettingsManager : SettingsMenu
     {
         Screen.fullScreen = isFullScreen;
         GameObject full = new GameObject();
-        FullScr fs = full.AddComponent<FullScr>();
+        SettingsMenu fs = full.AddComponent<FullScr>();
         fs.ChangedD();
         fs.ChangedF();
     }

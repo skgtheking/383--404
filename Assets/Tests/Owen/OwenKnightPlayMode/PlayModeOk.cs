@@ -6,20 +6,24 @@ using UnityEngine.TestTools;
 
 public class PlayModeOk
 {
-    // A Test behaves as an ordinary method
-    [Test]
-    public void PlayModeOkSimplePasses()
-    {
-        // Use the Assert class to test conditions
-    }
 
+    private HealthBar healthBar;
+
+    [SetUp]
+    public void SetUp()
+    {
+        GameObject HB = new GameObject();
+        healthBar = HB.AddComponent<HealthBar>();
+    }
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
     // `yield return null;` to skip a frame.
     [UnityTest]
     public IEnumerator PlayModeOkWithEnumeratorPasses()
     {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
+        int initialHealth = 100;
+        healthBar.SetMaxHealth(initialHealth);
+        healthBar.SetHealth(initialHealth + 1);
+        Assert.That(initialHealth <= 100);
         yield return null;
     }
 }
