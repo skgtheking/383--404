@@ -6,35 +6,37 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
 
-    [SerializeField]private int level;
+    public static int level;
 
-    [SerializeField] private GameObject firstRoomFog;
-    [SerializeField] private GameObject secondRoomFog;
-    [SerializeField] private GameObject thirdRoomFog;
+    [SerializeField] private GameObject firstRoomFog, secondRoomFog, thirdRoomFog, enemy;
 
     [SerializeField] private Enemy enemyscript;
-
-    [SerializeField] private GameObject enemy;
+    
 
     [SerializeField] private float fadeDuration = 2f;
 
     void Start()
     {
+        
+
+
         enemyscript = GameObject.FindWithTag("enemy").GetComponent<Enemy>();
         enemy.SetActive(false);
         level = 1;
-        fogChanger();
+        firstRoomFog.SetActive(false);
+        secondRoomFog.SetActive(true);
+        thirdRoomFog.SetActive(true);
+        
+        Vector2 flytrapPosition = new Vector2((float)-2, (float)-1.8);
+
+        TrapHandler.SpawnTrap("Fly", flytrapPosition);
         
     }
 
 
     public void fogChanger()
     {
-        // Disable only the first room fog
-        firstRoomFog.SetActive(false);
-        secondRoomFog.SetActive(true);
-        thirdRoomFog.SetActive(true);
-
+        
         switch (level)
         {
             case 1:

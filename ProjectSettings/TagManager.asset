@@ -36,6 +36,10 @@ TagManager:
   - FireSound
   - ConcreteSound
   - Fire
+  - PuzzleCollider
+  - GridRandomizer
+  - QuestionGenerator
+  - player
   layers:
   - Default
   - TransparentFX
