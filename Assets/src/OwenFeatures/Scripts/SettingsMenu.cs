@@ -67,7 +67,7 @@ public class SettingsM
 {
     public static GameObject LoadSettings(string settingName)
     {
-        return GameObject.FindGameObjectWithTag(settingName);
+        return GameObject.FindWithTag(settingName);
     }
 
     public static void ChangeSetting(string settingName, Vector2 position)
