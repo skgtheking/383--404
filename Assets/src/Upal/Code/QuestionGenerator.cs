@@ -17,7 +17,7 @@ public class QuestionGenerator : MonoBehaviour, IQuestionGenerator
         questionAndAnswers.Add("Imagine there's no --- It's easy if you try-John Lennon,Heaven");
         questionAndAnswers.Add("Now I'm floating like a --- Never hit so hard in love-Sia,Chandelier");
         questionAndAnswers.Add("Cause all of me --- All of you-John Legend,Loves");
-        questionAndAnswers.Add("But baby, now we got --- You know it ..-Taylor Swift,Blank Space");
+        questionAndAnswers.Add("But baby. now we got --- You know it ..-Taylor Swift,Blank Space");
         questionAndAnswers.Add("Cause darling I'm a nightmare dressed like a --- Your worst nightmare-Taylor Swift,Blank Space");
         questionAndAnswers.Add("I got the eye of the --- A fighter-Demi Lovato,Roar");
         questionAndAnswers.Add("I got the --- Like Jagger-Maroon 5,Moves");
