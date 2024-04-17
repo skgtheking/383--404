@@ -15,6 +15,7 @@ public class PlayerControl : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
+        /*For making compayible on moblie platform*/
         movement.x += Input.acceleration.x;
         movement.y += Input.acceleration.y;
 
@@ -27,5 +28,15 @@ public class PlayerControl : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
+
+    public void UpdateInput(Vector2 movementInput)
+    {
+        movement = movementInput;
+    }
+
+    public float GetMoveSpeed()
+    {
+        return moveSpeed;
     }
 }

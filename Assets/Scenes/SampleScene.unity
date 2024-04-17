@@ -2833,6 +2833,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 631b59c193972e14e95d9f2650d3cd55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctAnswer: 
+  newQuestion: 
 --- !u!1 &332504247
 GameObject:
   m_ObjectHideFlags: 0
@@ -112476,6 +112478,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 631b59c193972e14e95d9f2650d3cd55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctAnswer: 
+  newQuestion: 
 --- !u!4 &1500207329
 Transform:
   m_ObjectHideFlags: 0
@@ -115574,14 +115578,14 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d08d12c5463dae54595dd3d32dd69276, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 9.46, y: 8.21}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!82 &1876904077
