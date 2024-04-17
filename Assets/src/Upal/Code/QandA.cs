@@ -49,23 +49,6 @@ public class QandA : MonoBehaviour
                 Debug.LogError("No question found!");
             }
     }
-    public void Test_Question()
-    {
-            QandA_Canvas.gameObject.SetActive(true);
-
-            // Get a random question from the QuestionGenerator
-            newQuestion = questionGenerator.GetRandomQuestion();
-            if (!string.IsNullOrEmpty(newQuestion))
-            {
-                string[] questionParts = newQuestion.Split(',');
-                questionText.text = questionParts[0]; // Display the question part
-                correctAnswer = questionParts[1]; // Store the correct answer
-            }
-            else
-            {
-                Debug.LogError("No question found!");
-            }
-    }
 
     public void CheckQuestion()
     {

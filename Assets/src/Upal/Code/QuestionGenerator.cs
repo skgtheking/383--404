@@ -13,18 +13,19 @@ public class QuestionGenerator : MonoBehaviour, IQuestionGenerator
 
     public void InitializeQuestions()
     {
-        // Add 10 sample questions with answers
-        questionAndAnswers.Add("What's the capital of France?,Paris");
-        questionAndAnswers.Add("Which planet is known as the Red Planet?,Mars");
-        questionAndAnswers.Add("Who painted the Mona Lisa?,Leonardo da Vinci");
-        questionAndAnswers.Add("What is the largest mammal in the world?,Blue whale");
-        questionAndAnswers.Add("Who wrote 'Romeo and Juliet'?,William Shakespeare");
-        questionAndAnswers.Add("What is the currency of Japan?,Japanese Yen");
-        questionAndAnswers.Add("Which country is known as the 'Land of the Rising Sun'?,Japan");
-        questionAndAnswers.Add("What is the largest ocean on Earth?,Pacific Ocean");
-        questionAndAnswers.Add("Who invented the telephone?,Alexander Graham Bell");
-        questionAndAnswers.Add("What is the capital of Australia?,Canberra");
+        // Add sample questions with answers
+        questionAndAnswers.Add("Imagine there's no --- It's easy if you try-John Lennon,Heaven");
+        questionAndAnswers.Add("Now I'm floating like a --- Never hit so hard in love-Sia,Chandelier");
+        questionAndAnswers.Add("Cause all of me --- All of you-John Legend,Loves");
+        questionAndAnswers.Add("But baby, now we got --- You know it ..-Taylor Swift,Blank Space");
+        questionAndAnswers.Add("Cause darling I'm a nightmare dressed like a --- Your worst nightmare-Taylor Swift,Blank Space");
+        questionAndAnswers.Add("I got the eye of the --- A fighter-Demi Lovato,Roar");
+        questionAndAnswers.Add("I got the --- Like Jagger-Maroon 5,Moves");
+        questionAndAnswers.Add("Said no more counting --- We'll be counting stars-OneRepublic,Stars");
+        questionAndAnswers.Add("So baby. pull me --- This is a hurricane-Ed Sheeran,Photograph");
+        questionAndAnswers.Add("And I will always --- Even if it's just in your-Charlie Puth,See You Again");
     }
+
 
     public string GetRandomQuestion()
     {
