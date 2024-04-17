@@ -1,82 +1,84 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.UI;
 
-public class SettingsMenu : MonoBehaviour
+public abstract class SettingsMenu : MonoBehaviour
 {
-    public AudioMixer audioMixer;
-    public TMPro.TMP_Dropdown resolutionDropdown;
-    public GameObject SettingsMenu2;
-    public GameObject lol;
-    Resolution[] resolutions;
-    private bool settingsOn;
+    public abstract void ChangedF();
 
-    void Update()
+    public virtual void ChangedD()
     {
-        invControl();
+
     }
-    void Start()
+}
+public class Volume : SettingsMenu
+{
+    public override void ChangedF()
     {
-        settingsOn = false;
+        Debug.Log("Volume Changed Factory");
+    }
 
-        resolutions = Screen.resolutions;
-        resolutionDropdown.ClearOptions();
+    public override void ChangedD()
+    {
+        Debug.Log("Volume Changed Dynamic");
+    }
+}   
 
-        List<string> options = new List<string>();
-        int currentResolutionIndex = 0;
+public class Resolutions : SettingsMenu
+{
+    public override void ChangedF()
+    {
+        Debug.Log("Resolution Changed Factory");
+    }
 
-        for (int i = 0; i < resolutions.Length; i++)
+    public override void ChangedD()
+    {
+        Debug.Log("Resolution Changed Dynamic");
+    }
+}
+
+public class Graphics : SettingsMenu
+{
+    public override void ChangedF()
+    {
+        Debug.Log("Graphics Changed Factory");
+    }
+
+    public override void ChangedD()
+    {
+        Debug.Log("Graphics Changed Dynamic");
+    }
+}
+
+public class FullScr : SettingsMenu
+{
+    public override void ChangedF()
+    {
+        Debug.Log("FullScreen Changed Factory");
+    }
+
+    public override void ChangedD()
+    {
+        Debug.Log("FullScreen Changed Dynamic");
+    }
+}
+
+public class SettingsM
+{
+    public static GameObject LoadSettings(string settingName)
+    {
+        return GameObject.FindGameObjectWithTag(settingName);
+    }
+
+    public static void ChangeSetting(string settingName, Vector2 position)
+    {
+        GameObject settingType = LoadSettings(settingName);
+
+        if (settingType != null)
         {
-            string option = resolutions[i].width + " x " + resolutions[i].height;
-            options.Add(option);
-
-            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
-            {
-                currentResolutionIndex = i;
-            }
+            GameObject settingInstance = GameObject.Instantiate(settingType, position, Quaternion.identity);
+            SettingsMenu settingComponent = settingInstance.GetComponent<SettingsMenu>();
+            settingComponent.ChangedF();
         }
-
-        resolutionDropdown.AddOptions(options);
-        resolutionDropdown.value = currentResolutionIndex;
-        resolutionDropdown.RefreshShownValue();
-    }
-
-    void invControl()
-    {
-        if (Input.GetKeyDown(KeyCode.G) && settingsOn)
-        {
-            Time.timeScale = 1;
-            SettingsMenu2.SetActive(false);
-            settingsOn = false;
-        }
-
-        else if (Input.GetKeyDown(KeyCode.G) && !settingsOn)
-        {
-            Time.timeScale = 0;
-            SettingsMenu2.SetActive(true);
-            settingsOn = true;
-        }
-    }
-
-    public void SetResolution(int resolutionIndex)
-    {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-    }
-
-    public void SetVolume(float volume)
-    {
-        audioMixer.SetFloat("volume", volume);
-    }
-
-    public void SetQuality(int qualityIndex)
-    {
-        QualitySettings.SetQualityLevel(qualityIndex);
-    }
-    public void SetFullscreen(bool isFullScreen)
-    {
-        Screen.fullScreen = isFullScreen;
     }
 }
