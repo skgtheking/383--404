@@ -40,6 +40,10 @@ TagManager:
   - GridRandomizer
   - QuestionGenerator
   - player
+  - ResolutionOK
+  - FullScreenOK
+  - VolumeOK
+  - GraphicsOK
   layers:
   - Default
   - TransparentFX

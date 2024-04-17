@@ -249,7 +249,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 357853394653379008}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SettingsMenu, Scripts
         m_MethodName: SetQuality
         m_Mode: 0
@@ -890,7 +890,6 @@ GameObject:
   - component: {fileID: 3441730398218495690}
   - component: {fileID: 8015847050049828119}
   - component: {fileID: 3224061222475597234}
-  - component: {fileID: 357853394653379008}
   m_Layer: 5
   m_Name: SettingsCanvas
   m_TagString: Untagged
@@ -981,22 +980,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &357853394653379008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3774629456030765061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 239001a7e6d00bc439d76733944e1eef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: 44ca7388661239f45ae7d486cc09c9c6, type: 2}
-  resolutionDropdown: {fileID: 6442471408906224632}
-  SettingsMenu2: {fileID: 7515512740913809194}
-  lol: {fileID: 0}
 --- !u!1 &4759074302285564916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,7 +1065,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 357853394653379008}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SettingsMenu, Scripts
         m_MethodName: SetFullscreen
         m_Mode: 0
@@ -2080,7 +2063,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 357853394653379008}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SettingsMenu, Scripts
         m_MethodName: SetVolume
         m_Mode: 0
@@ -2530,10 +2513,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6962647771175501586, guid: f4d154146074df24fb038c6575ca3040, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 357853394653379008}
-    - target: {fileID: 6962647771175501586, guid: f4d154146074df24fb038c6575ca3040, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetResolution
       objectReference: {fileID: 0}
@@ -2555,14 +2534,3 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4222231511188199843, guid: f4d154146074df24fb038c6575ca3040, type: 3}
   m_PrefabInstance: {fileID: 4163589807364373738}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6442471408906224632 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6962647771175501586, guid: f4d154146074df24fb038c6575ca3040, type: 3}
-  m_PrefabInstance: {fileID: 4163589807364373738}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
