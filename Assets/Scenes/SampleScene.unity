@@ -2974,8 +2974,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ae84d463e09404296c17249226da40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioManager: {fileID: 1577322824}
-  levelManager: {fileID: 1839477060}
+  levelManager: {fileID: 0}
+  soundPlayer: {fileID: 0}
 --- !u!95 &305602319
 Animator:
   serializedVersion: 5

@@ -4,47 +4,59 @@ using UnityEngine;
 
 public class PlayAudio : MonoBehaviour
 {
-    public AudioManager audioManager;
     public LevelManager levelManager;
+    public SoundPlayer soundPlayer;
+    private float previousLevel = 0;
 
-    private int previousLevel = 0;
-
-    // Start is called before the first frame update
     void Start()
     {
-        
+        levelManager = GameObject.FindObjectOfType<LevelManager>();
+        if (levelManager == null)
+        {
+            Debug.LogError("levelManager is not assigned in PlayAudio script.");
+            return;
+        }
+
+        if (soundPlayer == null)
+        {
+            soundPlayer = new GrassSoundPlayer();
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Check if the current level has changed
-        if ((int)levelManager.currentLevel() != previousLevel)
+        if (levelManager == null)
         {
-            // Get the current level
-            int currentLevel = (int)levelManager.currentLevel();
+            Debug.LogError("levelManager is not assigned in PlayAudio script.");
+            return;
+        }
 
-            // Play different sounds based on the current level
+        if (soundPlayer == null)
+        {
+            soundPlayer = new GrassSoundPlayer();
+        }
+
+        float currentLevel = levelManager.currentLevel();
+
+        if (currentLevel!= previousLevel)
+        {
             switch (currentLevel)
             {
                 case 1:
-                    audioManager.PlayWalkingGrassSound();
-                    Debug.Log("Playing grass sound");
+                    soundPlayer = new GrassSoundPlayer();
                     break;
                 case 2:
-                    audioManager.PlayWalkingWoodSound();
-                    Debug.Log("Playing wood sound");
+                    soundPlayer = new WoodSoundPlayer();
                     break;
                 case 3:
-                    audioManager.PlayFireBurningSound();
-                    Debug.Log("Playing fire sound");
+                    soundPlayer = new FireSoundPlayer();
                     break;
                 default:
                     // Handle additional levels if needed
                     break;
             }
 
-            // Update the previous level to the current level
+            soundPlayer.PlaySound();
             previousLevel = currentLevel;
         }
     }
