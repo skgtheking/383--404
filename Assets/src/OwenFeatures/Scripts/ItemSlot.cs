@@ -54,10 +54,6 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
             OnLeftClick();
         }
 
-        if (eventData.button == PointerEventData.InputButton.Right)
-        {
-            OnRightClick();
-        }
     }
 
     public void OnLeftClick()
@@ -73,10 +69,5 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         {
             itemDescriptionImage.sprite = emptySprite;
         }
-    }
-
-    public void OnRightClick()
-    {
-
     }
 }

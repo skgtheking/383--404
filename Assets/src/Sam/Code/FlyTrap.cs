@@ -40,7 +40,7 @@ public class FlyTrap : Trap
             {
                 // Player is not on the left side, deactivate the trap
                 animator.SetFloat("distance", -1f); // Set distance to a negative value to deactivate
-                Debug.Log("Player is not on the left side of the trap.");
+                
             }
         }
         else

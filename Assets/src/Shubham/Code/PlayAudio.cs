@@ -29,13 +29,15 @@ public class PlayAudio : MonoBehaviour
             {
                 case 1:
                     audioManager.PlayWalkingGrassSound();
+                    Debug.Log("Playing grass sound");
                     break;
                 case 2:
                     audioManager.PlayWalkingWoodSound();
+                    Debug.Log("Playing wood sound");
                     break;
                 case 3:
-                    
                     audioManager.PlayFireBurningSound();
+                    Debug.Log("Playing fire sound");
                     break;
                 default:
                     // Handle additional levels if needed

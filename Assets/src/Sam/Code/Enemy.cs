@@ -6,9 +6,11 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] public Rigidbody2D rb;
 
-    [SerializeField] private GameObject player;
+    [SerializeField] public GameObject player;
+
+    [SerializeField] public BoxCollider2D box;
 
     public float movespeed, viewdistance, increase;
     private float distance;
@@ -19,6 +21,7 @@ public class Enemy : MonoBehaviour
      
      player = GameObject.FindWithTag("player");
      rb = GetComponent<Rigidbody2D>();  
+     box = GetComponent<BoxCollider2D>();
 
     }
 
@@ -29,8 +32,9 @@ public class Enemy : MonoBehaviour
         
     }
 
-    void followPlayer()
+    public void followPlayer()
     {
+
         Vector2 enemyPosition = new Vector2(this.transform.position.x, this.transform.position.y);
 
         distance = Vector2.Distance(this.transform.position, player.transform.position);

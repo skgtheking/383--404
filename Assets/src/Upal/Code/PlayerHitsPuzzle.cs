@@ -15,7 +15,7 @@ public class PlayerHitsPuzzle : MonoBehaviour
     // Update is called once per frame
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("PuzzleCollider"))
+        if (other.gameObject.CompareTag("PuzzleCollider") && !ChallengeManager.puzzleStatus())
         {
             puzzleCanvas.gameObject.SetActive(true);
         }

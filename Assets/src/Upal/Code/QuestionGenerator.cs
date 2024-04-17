@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuestionGenerator : MonoBehaviour
+public class QuestionGenerator : MonoBehaviour, IQuestionGenerator
 {
     public List<string> questionAndAnswers = new List<string>();
 

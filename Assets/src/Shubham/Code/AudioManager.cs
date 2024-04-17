@@ -35,13 +35,23 @@ public class AudioManager : MonoBehaviour
     {
         // Get references to the AudioSource components by tag
         backgroundMusicSource = GameObject.FindGameObjectWithTag("BackgroundMusic").GetComponent<AudioSource>();
+        Debug.Log(backgroundMusicSource ? "BackgroundMusicSource initialized" : "BackgroundMusicSource not found");
+
         walkingGrassSource = GameObject.FindGameObjectWithTag("WalkingGrass").GetComponent<AudioSource>();
+        Debug.Log(walkingGrassSource ? "WalkingGrassSource initialized" : "WalkingGrassSource not found");
+
         walkingWoodSource = GameObject.FindGameObjectWithTag("WoodSound").GetComponent<AudioSource>();
-        monsterRoarSource = GameObject.FindGameObjectWithTag("MonsterRoar").GetComponent<AudioSource>();
+        Debug.Log(walkingWoodSource ? "WalkingWoodSource initialized" : "WalkingWoodSource not found");
+
+
         walkingConcreteSource = GameObject.FindGameObjectWithTag("ConcreteSound").GetComponent<AudioSource>();
+        Debug.Log(walkingConcreteSource ? "WalkingConcreteSource initialized" : "WalkingConcreteSource not found");
+
         fireBurningSource = GameObject.FindGameObjectWithTag("FireSound").GetComponent<AudioSource>();
-        victorySoundSource = GameObject.FindGameObjectWithTag("VictorySound").GetComponent<AudioSource>();
-        defeatSoundSource = GameObject.FindGameObjectWithTag("DefeatSound").GetComponent<AudioSource>();
+        Debug.Log(fireBurningSource ? "FireBurningSource initialized" : "FireBurningSource not found");
+
+        
+
     }
 
     // Functions to play sound
@@ -77,8 +87,17 @@ public class AudioManager : MonoBehaviour
     public void PlayFireBurningSound()
     {
         //Stop wood sound
-        walkingWoodSource.Stop();
-        fireBurningSource.Play();
+        if (fireBurningSource != null)
+        {
+            walkingWoodSource.Stop();
+            fireBurningSource.Play();
+            Debug.Log("Played Fire Burning Sound");
+        }
+        else
+        {
+            Debug.LogError("FireBurningSource is not initialized");
+        }
+
     }
 
     public void PlayVictorySound()
