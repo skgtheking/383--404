@@ -62,6 +62,7 @@ public class MenuMANGAER : Singleton<MenuMANGAER>
 
 
     private GameObject HelpMenuInstance;
+    private bool isGamePaused;
 
     public void CreateMenu(GameMenu menu)
     {
@@ -152,7 +153,21 @@ public class MenuMANGAER : Singleton<MenuMANGAER>
 
 
     }
+
+    private void PauseGame()
+    {
+        Time.timeScale = 0; // Pause the game
+        isGamePaused = true; // Set the flag to indicate that the game is paused
+    }
+
+    private void ResumeGame()
+    {
+        Time.timeScale = 1; // Resume the game
+        isGamePaused = false; // Reset the flag
+    }
 }
+
+
 
 internal class HelpMenu
 {
