@@ -17,12 +17,27 @@ public class AddItems
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
     // `yield return null;` to skip a frame.
     [UnityTest]
-    public IEnumerator AddItemsWithEnumeratorPasses()
+    public IEnumerator AddItemsBoundary()
     {
         Sprite heart = Resources.Load<Sprite>("heart");
         int count = 0;
 
         for(int i = 0; i < 7; i++)
+        {
+            inventoryManager.AddItem("lol", 1, heart, "lol");
+            count++;
+        }
+        Assert.That(count < 6);
+        yield return null;
+    }
+
+    [UnityTest]
+    public IEnumerator AddItemsStress()
+    {
+        Sprite heart = Resources.Load<Sprite>("heart");
+        int count = 0;
+
+        for (int i = 0; i < 100000; i++)
         {
             inventoryManager.AddItem("lol", 1, heart, "lol");
             count++;

@@ -70,8 +70,8 @@ public class SettingsManager : SettingsMenu
         GameObject resol = new GameObject();
         SettingsMenu res = resol.AddComponent<Resolutions>();
         res.ChangedD();
-        res.ChangedF();
-    }
+   }
+
 
     public void SetVolume(float volume)
     {
@@ -90,6 +90,7 @@ public class SettingsManager : SettingsMenu
         graph.ChangedD();
         graph.ChangedF();
     }
+
     public void SetFullscreen(bool isFullScreen)
     {
         Screen.fullScreen = isFullScreen;
