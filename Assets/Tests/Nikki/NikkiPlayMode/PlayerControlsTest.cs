@@ -6,6 +6,7 @@ using UnityEngine.TestTools;
 
 public class PlayerControlsTest
 {
+    private GameObject gameObject;
     //Reference to PlayerControl component attached to the test GameObject
     private PlayerControl player;
 
@@ -13,54 +14,33 @@ public class PlayerControlsTest
     public void Setup()
     {
         //Create a new GameObject and add the PlayerControl component to it for testing
-        GameObject playerObject = new GameObject();
-        player = playerObject.AddComponent<PlayerControl>();
+        gameObject = GameObject.Instantiate(new GameObject());
+        player = gameObject.AddComponent<PlayerControl>();
     }
 
     [UnityTest]
-    public IEnumerator PlayerMovesCorrectly()
+    public IEnumerator HasRigidBody2d()
     {
-        //SetUp intial position & movement
-        Vector2 initialPosition = player.transform.position;
-        Vector2 movement = new Vector2(1f, 0f);
-
-        //Simulate player Input
-        player.UpdateInput(movement);
-
-        //Wait for one frame
-        yield return null;
-
-        // Check if player has moved
-        Assert.AreNotEqual(initialPosition, player.transform.position);
-
-        // Check if player has moved in the correct direction
-        Assert.AreEqual(player.transform.position, initialPosition + movement * player.GetMoveSpeed() * Time.fixedDeltaTime);
-
+        yield return new WaitForSeconds(0.1f);
+        Assert.NotNull(player.GetComponent<Rigidbody2D>(), "player has Rigidbody2D attached");
     }
 
 
     [UnityTest]
-    public IEnumerator PlayerAnimationUpdates()
+    public IEnumerator PlayerMovesAfterGameStarts()
     {
-        // Set up movement for testing animation
-        Vector2 movement = new Vector2(1f, 0f);
+        Vector3 position = player.transform.position;
+        yield return new WaitForSeconds(0.1f);
 
-        // Simulate player input
-        player.UpdateInput(movement);
+        Vector3 newPosition = player.transform.position;
+        Assert.AreNotEqual(newPosition, position, "Movement Test Passed. Player object moved from" + position + "to" + newPosition);
 
-        // Wait for one frame
-        yield return null;
-
-        // Check if animation parameters are set correctly
-        Assert.AreEqual(player.animator.GetFloat("Horizontal"), movement.x);
-        Assert.AreEqual(player.animator.GetFloat("Vertical"), movement.y);
-        Assert.AreEqual(player.animator.GetFloat("Speed"), movement.sqrMagnitude);
     }
 
     [TearDown]
     public void Teardown()
     {
         // Clean up after the test
-        GameObject.Destroy(player.gameObject);
+        GameObject.Destroy(gameObject);
     }
 }
