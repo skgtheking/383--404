@@ -3,7 +3,10 @@ guid: be6e68c7eebd24c57a5458195980e0a1
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - pauseMenuPrefab: {fileID: 434972991619473708, guid: dc437623e90f5453bb5dd99813185e64, type: 3}
+  - canvasPrefab: {fileID: 918919260827740459, guid: b6b5b5f6abb0d4098a2f8ed248381217, type: 3}
+  - MainMenu: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
