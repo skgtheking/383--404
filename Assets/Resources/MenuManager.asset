@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be6e68c7eebd24c57a5458195980e0a1, type: 3}
   m_Name: MenuManager
   m_EditorClassIdentifier: 
-  pauseMenuPrefab: {fileID: 0}
-  canvasPrefab: {fileID: 0}
+  pauseMenuPrefab: {fileID: 434972991619473708, guid: dc437623e90f5453bb5dd99813185e64, type: 3}
+  canvasPrefab: {fileID: 918919260827740459, guid: b6b5b5f6abb0d4098a2f8ed248381217, type: 3}
   MainMenu: {fileID: 0}
