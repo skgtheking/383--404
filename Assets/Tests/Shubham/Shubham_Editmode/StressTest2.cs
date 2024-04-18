@@ -12,7 +12,7 @@ public class StressTest2
         GameObject audioManagerObj = new GameObject();
         audioManagerObj.AddComponent<AudioManager>();
         AudioManager audioManager = AudioManager.Instance;
-
+        audioManager.Start();
         // Null check for AudioManager
         Assert.IsNotNull(audioManager, "AudioManager is null.");
 

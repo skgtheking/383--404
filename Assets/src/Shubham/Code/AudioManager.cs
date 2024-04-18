@@ -22,16 +22,16 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private AudioSource backgroundMusicSource;
-    private AudioSource walkingGrassSource;
-    private AudioSource walkingWoodSource;
-    private AudioSource monsterRoarSource;
-    private AudioSource walkingConcreteSource;
-    private AudioSource fireBurningSource;
-    private AudioSource victorySoundSource;
-    private AudioSource defeatSoundSource;
+    public AudioSource backgroundMusicSource;
+    public AudioSource walkingGrassSource;
+    public AudioSource walkingWoodSource;
+    public AudioSource monsterRoarSource;
+    public AudioSource walkingConcreteSource;
+    public AudioSource fireBurningSource;
+    public AudioSource victorySoundSource;
+    public AudioSource defeatSoundSource;
 
-    private void Start()
+    public void Start()
     {
         // Get references to the AudioSource components by tag
         backgroundMusicSource = GameObject.FindGameObjectWithTag("BackgroundMusic").GetComponent<AudioSource>();
