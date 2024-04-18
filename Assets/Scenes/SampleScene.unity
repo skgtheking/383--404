@@ -109661,6 +109661,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022935648}
   m_CullTransparentMesh: 1
+--- !u!1 &1027930328 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1856545079223316119, guid: 5ac497238c341c74da0020de4ed34863, type: 3}
+  m_PrefabInstance: {fileID: 2072374796}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1027930329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027930328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab0cdc431b498984d8685fcce1b90790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1028439877
 GameObject:
   m_ObjectHideFlags: 0
@@ -117506,6 +117523,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 42498492439780486, guid: 5ac497238c341c74da0020de4ed34863, type: 3}
+      propertyPath: m_TagString
+      value: HBOK
+      objectReference: {fileID: 0}
     - target: {fileID: 1856545079223316119, guid: 5ac497238c341c74da0020de4ed34863, type: 3}
       propertyPath: m_Name
       value: HUDCanvas
@@ -117715,6 +117736,14 @@ PrefabInstance:
       value: -24
       objectReference: {fileID: 0}
     - target: {fileID: 8981762710271459615, guid: 5ac497238c341c74da0020de4ed34863, type: 3}
+      propertyPath: m_text
+      value: 'Settings - G
+
+        Inventory - I
+
+        Title -T'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981762710271459615, guid: 5ac497238c341c74da0020de4ed34863, type: 3}
       propertyPath: m_fontSize
       value: 25
       objectReference: {fileID: 0}
@@ -117725,7 +117754,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1856545079223316119, guid: 5ac497238c341c74da0020de4ed34863, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1027930329}
   m_SourcePrefab: {fileID: 100100000, guid: 5ac497238c341c74da0020de4ed34863, type: 3}
 --- !u!1 &2072374797 stripped
 GameObject:
@@ -117928,6 +117960,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3412790161958709609, guid: e25c9471d67efe1488f62106ba747ccd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3412790161958709609, guid: e25c9471d67efe1488f62106ba747ccd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3441730398218495690, guid: e25c9471d67efe1488f62106ba747ccd, type: 3}
       propertyPath: m_Camera
       value: 
@@ -118003,6 +118043,22 @@ PrefabInstance:
     - target: {fileID: 6442471408906224632, guid: e25c9471d67efe1488f62106ba747ccd, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SettingsManager, Scripts
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515512740913809194, guid: e25c9471d67efe1488f62106ba747ccd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180734683913839349, guid: e25c9471d67efe1488f62106ba747ccd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180734683913839349, guid: e25c9471d67efe1488f62106ba747ccd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180734683913839349, guid: e25c9471d67efe1488f62106ba747ccd, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8282628197516327864, guid: e25c9471d67efe1488f62106ba747ccd, type: 3}
       propertyPath: m_TagString

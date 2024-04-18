@@ -44,6 +44,7 @@ TagManager:
   - FullScreenOK
   - VolumeOK
   - GraphicsOK
+  - HBOK
   layers:
   - Default
   - TransparentFX

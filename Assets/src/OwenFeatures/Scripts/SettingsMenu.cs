@@ -70,13 +70,13 @@ public class SettingsM
         return GameObject.FindWithTag(settingName);
     }
 
-    public static void ChangeSetting(string settingName, Vector2 position)
+    public static void ChangeSetting(string settingName)
     {
         GameObject settingType = LoadSettings(settingName);
 
         if (settingType != null)
         {
-            GameObject settingInstance = GameObject.Instantiate(settingType, position, Quaternion.identity);
+            GameObject settingInstance = settingType;
             SettingsMenu settingComponent = settingInstance.GetComponent<SettingsMenu>();
             settingComponent.ChangedF();
         }
