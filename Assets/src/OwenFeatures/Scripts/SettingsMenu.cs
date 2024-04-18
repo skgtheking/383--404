@@ -8,7 +8,7 @@ public abstract class SettingsMenu : MonoBehaviour
 
     public virtual void ChangedD()
     {
-
+        Debug.Log("Lol");
     }
 }
 public class Volume : SettingsMenu

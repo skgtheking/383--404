@@ -70,6 +70,7 @@ public class SettingsManager : SettingsMenu
         GameObject resol = new GameObject();
         SettingsMenu res = resol.AddComponent<Resolutions>();
         res.ChangedD();
+        res.ChangedF();
    }
 
 
