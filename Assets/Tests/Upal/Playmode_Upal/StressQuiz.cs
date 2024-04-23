@@ -23,7 +23,7 @@ public class StressQuiz
     public IEnumerator StressQuizWithEnumeratorPasses()
     {
         // Number of times you want to call GetRandomQuestion
-        int numberOfIterations = 100;
+        int numberOfIterations = 1000;
 
         for (int i = 0; i < numberOfIterations; i++)
         {
