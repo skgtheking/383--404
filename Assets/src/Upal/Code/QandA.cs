@@ -38,7 +38,7 @@ public class QandA : MonoBehaviour
             newQuestion = questionGenerator.GetRandomQuestion();
             if (!string.IsNullOrEmpty(newQuestion))
             {
-                string[] questionParts = newQuestion.Split(',');
+                string[] questionParts = newQuestion.Split(" - ");
                 questionText.text = questionParts[0]; // Display the question part
                 Debug.Log(questionParts[0]);
                 correctAnswer = questionParts[1]; // Store the correct answer

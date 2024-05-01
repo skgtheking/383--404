@@ -50,7 +50,7 @@ public class InventoryManager : MonoBehaviour
             }
         }
     }
-
+    // functional cohesion
     public void DeselectAllSlots()
     {
         for (int i = 0; i < itemSlot.Length; i++)

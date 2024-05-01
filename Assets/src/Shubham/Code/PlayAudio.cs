@@ -37,7 +37,7 @@ public class PlayAudio : MonoBehaviour
         }
 
         float currentLevel = levelManager.currentLevel();
-
+        // logical cohesion
         if (currentLevel!= previousLevel)
         {
             switch (currentLevel)

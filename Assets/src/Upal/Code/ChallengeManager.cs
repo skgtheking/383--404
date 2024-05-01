@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChallengeManager : MonoBehaviour
 {
+    // Communicational cohesion
     private static bool puzzlechallenge = false;
     private static bool quizchallenge = false;
     // Start is called before the first frame update

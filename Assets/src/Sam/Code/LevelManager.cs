@@ -33,10 +33,9 @@ public class LevelManager : MonoBehaviour
         
     }
 
-
+    // logical cohesion
     public void fogChanger()
     {
-        
         switch (level)
         {
             case 1:
