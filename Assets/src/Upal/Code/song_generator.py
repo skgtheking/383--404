@@ -2,7 +2,7 @@ import openai
 import os
 
 # Set up your OpenAI API key
-openai.api_key = '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'
+openai.api_key = '' #API key has been kept secret for security and financial reasons. Please use your own API key. Our key is only for testing our features.
 
 # Define your prompt
 prompt = "generate 10 song lines, from popular singers, the lines should be less than 10 words"
@@ -16,6 +16,8 @@ response = openai.Completion.create(
   n=10
 )
 
+
+# Define the path to save the song lines
 file_path = os.path.join("Assets", "src", "Upal", "Code", "song_lines.txt")
 
 # Extract and save the song lines to a text file
