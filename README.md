@@ -3,10 +3,10 @@ Error 404</br>
 Welcome to the repository for our thrilling escape room game! This game challenges players to navigate through three increasingly difficult levels, each with unique puzzles and dangers. Your goal is to escape all three rooms to win!
 Level 1: The Quiz Challenge
 
-**Objective**: Find the key to progress to the next level.
-**Puzzle**: Discover a red box containing a quiz.
-**Task**: Identify the singer from the given song lyrics to complete the quiz.
-**Warning**: Beware of traps that might slow you down!
+**Objective**: Find the key to progress to the next level. <br>
+**Puzzle**: Discover a red box containing a quiz. <br>
+**Task**: Identify the singer from the given song lyrics to complete the quiz. <br>
+**Warning**: Beware of traps that might slow you down!<br>
 Level 2: The Monster Chase
 
 Objective: Solve puzzles and find the key to progress to the next level.
