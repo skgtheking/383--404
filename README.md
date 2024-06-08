@@ -21,4 +21,9 @@ Note: This level is designed to be easier, providing a satisfying end to your es
 Repository Contents
 Source Code: The complete source code for the game.
 Assets: All necessary game assets, including images, sound files, and more.
-Documentation: Detailed instructions on how to set up and play the game.
+Documentation: Detailed instructions on how to set up and play the game. <br>
+CONTROLS (kEYboard): <b>
+Up - Up Arrow/w Left Right - Right kry/ d Pause - ESC <b>
+down - Down arrow/ s Left - Left key/ A <b>
+Mobile - Shake your phone! <b>
+Look at the menu on left corner for menu access
