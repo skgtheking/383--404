@@ -9,9 +9,9 @@ Level 1: The Quiz Challenge
 **Warning**: Beware of traps that might slow you down!<br>
 **Level 2: The Monster Chase** <br>
 <br>
-**Objective**: Solve puzzles and find the key to progress to the next level.
-**Challenge**: A relentless monster starts following you. Avoid being hit three times!
-**Puzzle**: Locate the red box to receive a puzzle where you must enter values that add up to specified totals.
+**Objective**: Solve puzzles and find the key to progress to the next level. <br>
+**Challenge**: A relentless monster starts following you. Avoid being hit three times! <br>
+**Puzzle**: Locate the red box to receive a puzzle where you must enter values that add up to specified totals. <br>
 **Tip**: Solve quickly, as the monster is always on your tail! <br>
 **Level 3: The Final Quest** <br>
 **Objective**: Find the key to escape the room and win the game.
