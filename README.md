@@ -12,9 +12,8 @@ Level 1: The Quiz Challenge
 **Objective**: Solve puzzles and find the key to progress to the next level.
 **Challenge**: A relentless monster starts following you. Avoid being hit three times!
 **Puzzle**: Locate the red box to receive a puzzle where you must enter values that add up to specified totals.
-**Tip**: Solve quickly, as the monster is always on your tail!
+**Tip**: Solve quickly, as the monster is always on your tail! <br>
 **Level 3: The Final Quest** <br>
-<br>
 **Objective**: Find the key to escape the room and win the game.
 **Challenge**: Navigate through the room while avoiding firewalls that can burn you.
 **Note**: This level is designed to be easier, providing a satisfying end to your escape journey. <br>
