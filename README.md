@@ -19,8 +19,8 @@ Level 1: The Quiz Challenge
 **Challenge**: Navigate through the room while avoiding firewalls that can burn you.
 **Note**: This level is designed to be easier, providing a satisfying end to your escape journey. <br>
 **Repository Contents**
-**Source Code**: The complete source code for the game.
-**Assets**: All necessary game assets, including images, sound files, and more.
+**Source Code**: The complete source code for the game. <br>
+**Assets**: All necessary game assets, including images, sound files, and more. <br>
 **Documentation**: Detailed instructions on how to set up and play the game. <br>
 **CONTROLS (KEYboard)**: <br>
 Up - Up Arrow/w Left Right - Right kry/ d Pause - ESC <br>
