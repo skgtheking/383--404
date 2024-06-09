@@ -1,7 +1,7 @@
 # 383-404 </br>
-Error 404</br>
-Welcome to the repository for our thrilling escape room game! This game challenges players to navigate through three increasingly difficult levels, each with unique puzzles and dangers. Your goal is to escape all three rooms to win!
-Level 1: The Quiz Challenge
+**Error 404**</br>
+Welcome to the repository for our thrilling escape room game! This game challenges players to navigate through three increasingly difficult levels, each with unique puzzles and dangers. Your goal is to escape all three rooms to win! <br>
+**Level 1: The Quiz Challenge** <br>
 
 **Objective**: Find the key to progress to the next level. <br>
 ****Puzzle****: Discover a red box containing a quiz. <br>
