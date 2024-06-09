@@ -20,7 +20,7 @@ Welcome to the repository for our thrilling escape room game! This game challeng
 **Assets**: All necessary game assets, including images, sound files, and more. <br>
 **Documentation**: Detailed instructions on how to set up and play the game. <br>
 **CONTROLS (KEYboard)**: <br>
-Up - Up Arrow/w Left Right - Right kry/ d Pause - ESC <br>
-down - Down arrow/ s Left - Left key/ A <br>
+Up - Up Arrow/w Left Right - Right kry/ <br> Pause - ESC <br>
+down - Down arrow/ <br> Left - Left key/ A <br>
 Mobile - Shake your phone! <br>
-Look at the menu on left corner for menu access
+Look at the menu in left corner for menu access
